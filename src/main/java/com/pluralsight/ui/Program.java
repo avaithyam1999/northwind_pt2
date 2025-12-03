@@ -1,5 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.ui;
 
+import com.pluralsight.data.CustomerDao;
 import org.apache.commons.dbcp2.BasicDataSource;
 
 public class Program {
@@ -13,6 +14,6 @@ public class Program {
         dataSource.setUsername(username);
         dataSource.setPassword(password);
 
-
+        CustomerDao customerDao = new CustomerDao(dataSource);
     }
 }
