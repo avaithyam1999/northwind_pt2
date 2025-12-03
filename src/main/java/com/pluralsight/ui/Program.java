@@ -15,5 +15,6 @@ public class Program {
         dataSource.setPassword(password);
 
         CustomerDao customerDao = new CustomerDao(dataSource);
+        customerDao.getAll();
     }
 }
