@@ -32,10 +32,10 @@ public class Program {
                 List<Product> products = ProductDao.getAll();
 
                 System.out.println("======All Customers======");
-                for (Customer customer : customers) {
-                    System.out.println(customer.getCustomerId() + " - " +
-                            customer.getCompanyName() + " - " +
-                            customer.getContactName());
+                for (Product product : products) {
+                    System.out.println(product.getProductID() + " - " +
+                            product.getProductName() + " - " +
+                            product.getUnitPrice());
                 }
             }
         }
