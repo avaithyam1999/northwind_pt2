@@ -29,17 +29,21 @@ public class Program {
                 getAllCustomers(customerDao);
             }
             case 2 -> {
-                List<Product> products = ProductDao.getAll();
-
-                System.out.println("======All Customers======");
-                for (Product product : products) {
-                    System.out.println(product.getProductID() + " - " +
-                            product.getProductName() + " - " +
-                            product.getUnitPrice());
-                }
+                getAllProducts();
             }
         }
 
+    }
+
+    private static void getAllProducts() {
+        List<Product> products = ProductDao.getAll();
+
+        System.out.println("======All Customers======");
+        for (Product product : products) {
+            System.out.println(product.getProductID() + " - " +
+                    product.getProductName() + " - " +
+                    product.getUnitPrice());
+        }
     }
 
     private static CustomerDao setAuthentication(String[] args) {
